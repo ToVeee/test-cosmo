@@ -5,8 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Student Poems</title>
   <link rel="stylesheet" href="whatthefuckk.css">
+  <style>
+    /* Poem box styling */
+    .poem-box {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      background-color: #fdfdfd;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .poem-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    }
+    .poem-box h3 {
+      margin-bottom: 10px;
+      color: var(--accent); /* use your theme color */
+    }
+    .poem-box div {
+      line-height: 1.5;
+      color: var(--text2);
+    }
+  </style>
 </head>
 <body>
+
   <nav class="navbar">
     <div class="logo">Cupid <span>Cosmo</span></div>
     <ul class="nav-links">
@@ -20,7 +44,11 @@
     <div id="poemsContainer"></div>
   </main>
 
-  <script src="rfc.js"></script> <!-- object literal -->
-  <script src="poems.js"></script>
+  <!-- Student data -->
+  <script src="rfc.js"></script> <!-- studentslist object -->
+
+  <!-- Poems script -->
+  <script src="poem.js"></script>
+
 </body>
 </html>
