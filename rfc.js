@@ -153,7 +153,7 @@ const studentslist = {
 },
 
 "Calucin, Jellah Mae Manaog": {
-  PFP: "calucin,.png",
+  PFP: "calucin.png",
   TagalogPoem: "Calucin, poem tagalog.docx",
   EnglishPoem: "Calucin, poem english.docx",
   SixWordE: "Calucin ff e.docx",
@@ -321,4 +321,5 @@ const studentslist = {
 }
 
 };
+
 
