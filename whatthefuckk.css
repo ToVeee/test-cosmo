@@ -1,30 +1,27 @@
 * { box-sizing: border-box; margin: 0; padding: 0; font-family: "Poppins", sans-serif; }
 :root{
-  --bg1: #ffd6e8;
-  --bg2: #fff0f5;
-  --accent: #9b195a;
-  --accent-2: #ff80ab;
-  --text: #4a0e23;
-  --text2: #4a0e23;
-  --card: rgba(255,255,255,0.85);
+  --bg1: #0038A8;     /* deep blue */
+  --bg2: #CE1126;     /* Philippine red */
+  --accent: #8B4513;  /* earthy brown for highlights */
+  --accent-2: #A0522D; /* slightly lighter brown for gradients/buttons */
+  --text: #fff8f0;    /* off-white for readability */
+  --text2: #fff8f0;   /* secondary text */
+  --card: rgba(255, 248, 240, 0.85); /* translucent card background */
 }
 
 body{
   background: linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 100%);
   color: var(--text);
-  min-height: 100vh;
-  overflow-x: hidden;
-  transition: background 0.4s ease, color 0.4s ease;
 }
 
-
+/* Optional: dark mode version */
 .dark-mode {
-  --bg1: #2b0012;
-  --bg2: #4b0032;
-  --accent: #ffb6d6;
-  --accent-2: #ff7fb3;
-  --text: #fff0f5;
-  --text2:rgb(89, 6, 92);
+  --bg1: #001f3f; /* darker blue */
+  --bg2: #8B0000; /* darker red */
+  --accent: #A0522D; 
+  --accent-2: #D2691E;
+  --text: #fff8f0;
+  --text2: #fff8f0;
 }
                                                                                                                                                                                                                                                                                                                                                                                                                            
 
