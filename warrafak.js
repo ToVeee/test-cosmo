@@ -1,4 +1,3 @@
-
 // ---------------------------
 // Avatar generator
 // ---------------------------
@@ -31,7 +30,7 @@ function renderStudents(list) {
         <h3 class="student-name">${fullName}</h3>
         <p class="student-role">Student</p>
         <div class="student-actions">
-          <button class="btn view-btn" data-idx="${idx}">View</button>
+          <button class="btn view-btn" data-name="${fullName}">View</button>
         </div>
       </div>
     `;
@@ -40,14 +39,15 @@ function renderStudents(list) {
   });
 }
 
-
-  document.querySelectorAll(".view-btn").forEach(btn => {
-    btn.addEventListener("click", (e) => {
-      const idx = Number(e.currentTarget.dataset.idx);
-      openModal(list[idx]);
-    });
-  });
-
+// ---------------------------
+// Event Delegation for View button
+// ---------------------------
+studentGrid.addEventListener("click", (e) => {
+  if (e.target.classList.contains("view-btn")) {
+    const name = e.target.dataset.name;
+    openModal(name);
+  }
+});
 
 // ---------------------------
 // Modal
@@ -59,7 +59,8 @@ const modalRole = document.getElementById("modalRole");
 const modalClose = document.getElementById("modalClose");
 
 function openModal(name) {
-  modalImg.src = avatarFor(name);
+  const student = studentslist[name];
+  modalImg.src = student.PFP || avatarFor(name);
   modalName.textContent = name;
   modalRole.textContent = "Role: Student";
   modal.classList.add("show");
@@ -70,7 +71,9 @@ function closeModal() {
 }
 
 modalClose.addEventListener("click", closeModal);
-modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
+modal.addEventListener("click", e => {
+  if (e.target === modal) closeModal();
+});
 
 // ---------------------------
 // Search
