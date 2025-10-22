@@ -22,7 +22,7 @@ const studentslist = {
   EnglishPoem: "Bunyi, poem english.docx",
   SixWordE: "Bunyi, ff e.docx",
   SixWordT: "Bunyi, ff tagalog.docx",
-  poem: "Corruption, tell me why the Philippines has corruption.
+  poem: `<p> "Corruption, tell me why the Philippines has corruption.
 Because of the politicians who stole our donations,
 that’s why, on September 4, 2025,
 there was chaos and destruction everywhere.
@@ -45,7 +45,7 @@ You send us away,
 while so many people have died —
 and you politicians just don’t care
 about the flood that goes everywhere.
-"
+</p>`
 },
 
 "Chavez, Dancris Madriaga": {
@@ -345,6 +345,7 @@ about the flood that goes everywhere.
 }
 
 };
+
 
 
 
