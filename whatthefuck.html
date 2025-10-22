@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cupid Cosmo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="whatthefuckk.css" />
+</head>
+
+<body>
+  <div class="hearts-container" aria-hidden="true"></div>
+
+  <nav class="navbar" id="navbar">
+    <div class="logo">Cupid <span>Cosmo</span></div>
+    <ul class="nav-links">
+      <li><a href="#hero" data-scroll>Home</a></li>
+      <li><a href="#about" data-scroll>About</a></li>
+      <li><a href="#students" data-scroll>Students</a></li>
+      <li><a href="works.html" >Works</a></li>
+    </ul>
+    <div class="nav-actions">
+      <input id="searchInput" placeholder="Search students..." autocomplete="off" />
+      <button id="modeToggle" title="Toggle theme">💗</button>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <h1>Welcome to <span>Cupid Cosmo Hub</span></h1>
+        <p class="lead">Where learning meets love and creativity 💘</p>
+        <div class="hero-ctas">
+          <a class="cta-btn" id="getStartedBtn">Get Started</a>
+          <a class="secondary-btn" href="works.html" >See Works</a>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section class="students" id="students">
+      <h2>Student List</h2>
+      <div class="students-grid" id="studentGrid" aria-live="polite"></div>
+    </section>
+    
+<section class="about" id="about">
+      <h2>About Cupid Cosmo</h2>
+      <p class="about-text">
+        Cupid Cosmo is a dreamy, professional student portal for showcasing students and their works.
+        A pastel, romantic design with modern interactions — perfect for portfolios, editorial boards, and class showcases.
+      </p>
+      <div class="info-cards">
+        <div class="card">💞 Connect & Grow Together</div>
+        <div class="card">🎨 Creative Student Projects</div>
+        <div class="card">🚀 Innovation from the Heart</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal for student details -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div id="modalContent" class="modal-content">
+      <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+      <img id="modalImg" alt="" class="modal-img" />
+      <h3 id="modalName"></h3>
+      <p id="modalRole"></p>
+    </div>
+  </div>
+
+   <script src="rfc.js"></script>
+  <script src="warrafak.js"></script>
+ 
+</body>
+</html>
