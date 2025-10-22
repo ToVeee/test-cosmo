@@ -153,7 +153,7 @@ const studentslist = {
 },
 
 "Calucin, Jellah Mae Manaog": {
-  PFP: "calucin.png",
+  PFP: "Calucin.png",
   TagalogPoem: "Calucin, poem tagalog.docx",
   EnglishPoem: "Calucin, poem english.docx",
   SixWordE: "Calucin ff e.docx",
@@ -265,7 +265,7 @@ const studentslist = {
 },
 
 "Ostonal, Akisha Rachelle Therese": {
-  PFP: "ostonal.png",
+  PFP: "akisha.png",
   TagalogPoem: "Ostonal, poem tagalog.docx",
   EnglishPoem: "Ostonal, poem english.docx",
   SixWordE: "Ostonal, ff e.docx",
@@ -321,5 +321,6 @@ const studentslist = {
 }
 
 };
+
 
 
