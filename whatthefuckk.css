@@ -163,3 +163,23 @@ a { color: inherit; text-decoration: none; }
   top: 50%;
   transform: translateY(-50%);
 }
+
+.mobile-warning {
+  display: none; /* hide by default */
+  text-align: center;
+  background-color: #ffdddd;
+  color: #990000;
+  padding: 12px 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  margin: 16px;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Show only on screens smaller than 800px (adjust as needed) */
+@media (max-width: 800px) {
+  .mobile-warning {
+    display: block;
+  }
+}
