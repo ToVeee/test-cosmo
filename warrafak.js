@@ -1,10 +1,7 @@
 // ---------------------------
 // Avatar generator
 // ---------------------------
-function popfx() {
-    const audio = new Audio("pop.mp3"); // Make sure pop.mp3 is in the same folder or correct path
-    audio.play();
-}
+
 function avatarFor(name) {
   const encoded = encodeURIComponent(name);
   return `https://ui-avatars.com/api/?name=${encoded}&background=ffd6e8&color=4a0e23&rounded=true&size=256`;
@@ -114,3 +111,4 @@ setInterval(createHeart, 600);
 // Initial render
 // ---------------------------
 renderStudents(Object.keys(studentslist));
+
