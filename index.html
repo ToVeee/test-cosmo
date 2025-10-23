@@ -6,48 +6,7 @@
   <title>Welcome to Cupid Cosmo</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="whatthefuckk.css">
-  <style>
-    /* Login form styling */
-    .login-container {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: rgba(255, 255, 255, 0.95);
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-      width: 300px;
-      z-index: 10;
-      text-align: center;
-    }
-    .login-container h2 {
-      margin-bottom: 20px;
-      color: #ff69b4;
-    }
-    .login-container input {
-      width: 100%;
-      padding: 10px 12px;
-      margin: 8px 0;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 16px;
-    }
-    .login-container button {
-      width: 100%;
-      padding: 10px 0;
-      margin-top: 10px;
-      border: none;
-      border-radius: 6px;
-      background-color: #ff69b4;
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    .login-container button:hover {
-      background-color: #e65c9c;
-    }
-  </style>
+
 </head>
 <body>
   <div class="hearts-container" aria-hidden="true"></div>
@@ -76,44 +35,13 @@
   </main>
 
   <!-- LOGIN FORM -->
-  <div class="login-container" id="loginForm">
-    <h2>Login</h2>
-    <input type="text" id="username" placeholder="Username" />
-    <input type="password" id="password" placeholder="Password" />
-    <button onclick="login()">Login</button>
-    <p id="loginMsg" style="color:red; margin-top:10px;"></p>
-  </div>
+
 
   <script>
     // Heart animation
-    const heartsContainer = document.querySelector(".hearts-container");
-    function createHeart() {
-      const heart = document.createElement("div");
-      heart.className = "heart";
-      heart.style.left = Math.random() * window.innerWidth + "px";
-      heartsContainer.appendChild(heart);
-      setTimeout(() => heart.remove(), 6000);
-    }
-    setInterval(createHeart, 600);
-
+ 
     // Login function (demo)
-    function login() {
-      const user = document.getElementById("username").value;
-      const pass = document.getElementById("password").value;
-      const msg = document.getElementById("loginMsg");
-
-      // Demo credentials
-      if (user === "admin" && pass === "1234") {
-        msg.style.color = "green";
-        msg.textContent = "Login successful!";
-        setTimeout(() => {
-          document.getElementById("loginForm").style.display = "none";
-        }, 1000);
-      } else {
-        msg.style.color = "red";
-        msg.textContent = "Invalid username or password!";
-      }
-    }
+  
   </script>
 </body>
 </html>
