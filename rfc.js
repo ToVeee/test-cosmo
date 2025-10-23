@@ -150,7 +150,7 @@ const studentslist = {
     EnglishPoem: "Calong, poem english.docx",
     SixWordE: "Calong ff e.docx",
     SixWordT: "Calong ff t.docx"
-    Poem:'<p>The written letter that should’ve been a promise,
+    poem:'<p>The written letter that should’ve been a promise,
 Written in sweet words that feel <span class=”uf” onclick=”play()
    Alert(‘causing or liable to cause a feeling of nausea or disgust.’)
    Sickening
