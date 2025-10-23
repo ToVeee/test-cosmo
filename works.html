@@ -7,24 +7,42 @@
   <link rel="stylesheet" href="whatthefuckk.css" />
 </head>
 <body>
+ <div class="hearts-container" aria-hidden="true"></div>
 
-  <nav src=".navbar">
-    <a href="index.html">Home</a>
-    <a href="poem.html">Poems</a>
-    <a href="works.html">Works</a>
+  <nav class="navbar" id="navbar">
+    <div class="logo">Cupid <span>Cosmo</span></div>
+    <ul class="nav-links">
+      <li><a href="home.html" data-scroll>Home</a></li>
+      <li><a href="#about" data-scroll>About</a></li>
+      <li><a href="home.html#students" data-scroll>Students</a></li>
+      <li><a href="works.html#works" data-scroll>Works</a></li>
+    </ul>
+    <div class="nav-actions">
+      <input id="searchInput" placeholder="Search students..." autocomplete="off" />
+      <button id="modeToggle" title="Toggle theme">💗</button>
+    </div>
   </nav>
+  <section class="hero" id="hero">
+      <div class="hero-content">
+        <h1>Download <span> Works</span></h1>
+        <p class="lead">Where learning meets love and creativity 💘</p>
+        <div class="hero-ctas">
+          <a class="cta-btn" id="getStartedBtn" href="whatthefuck.html" >Go back</a>
+        </div>
+      </div>
+    </section>
 
-  <div class="works-wrapper">
-    <button id="orev">❮</button>
-    <section id="works"></section>
-    <button id="next">❯</button>
-  </div>
-
-  <input id="searchInput" placeholder="Search students..." />
-
+   <div class="works-wrapper">
+      <button id="orev" class="nav-btn prev-btn">❮</button>
+      <section class="works" id="works">
+        <!-- student boxes get appended here -->
+      </section>
+      <button id="next" class="nav-btn next-btn">❯</button>
+    </div>
   <script src="rfc.js"></script>
   <script src="cos.js"></script>
 
 </body>
 </html>
+
 
