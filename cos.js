@@ -1,11 +1,8 @@
-// cos.js
-
 const sec2 = document.getElementById("works");
 let currentPage = 1;
 const perPage = 5;
-let filteredList = Object.entries(studentslist); // initial full list
 
-function showPage(list = filteredList) {
+function showPage(list = Object.entries(studentslist)) {
   sec2.innerHTML = "";
 
   const start = (currentPage - 1) * perPage;
@@ -14,35 +11,33 @@ function showPage(list = filteredList) {
 
   currentItems.forEach(([name, files]) => {
     const div = document.createElement("div");
-    div.className = "student-box";
     div.style.border = "1px solid #ccc";
     div.style.padding = "15px";
     div.style.marginBottom = "20px";
     div.style.borderRadius = "6px";
     div.style.backgroundColor = "#fdfdfd";
 
-    // Add name
     const title = document.createElement("h3");
     title.textContent = name;
     div.appendChild(title);
 
-    // Add file links
     function addFileLink(label, src) {
-      if (!src) return;
-      const fileDiv = document.createElement("div");
-      fileDiv.style.border = "1px dashed #aaa";
-      fileDiv.style.padding = "8px";
-      fileDiv.style.margin = "5px 0";
+      if (src) {
+        const fileDiv = document.createElement("div");
+        fileDiv.style.border = "1px dashed #aaa";
+        fileDiv.style.padding = "8px";
+        fileDiv.style.margin = "5px 0";
 
-      const link = document.createElement("a");
-      link.href = src;
-      link.textContent = label;
-      link.target = "_blank";
-      link.style.textDecoration = "none";
-      link.style.color = "#ff69b4";
+        const link = document.createElement("a");
+        link.href = src;
+        link.textContent = label;
+        link.target = "_blank";
+        link.style.textDecoration = "none";
+        link.style.color = "#ff69b4";
 
-      fileDiv.appendChild(link);
-      div.appendChild(fileDiv);
+        fileDiv.appendChild(link);
+        div.appendChild(fileDiv);
+      }
     }
 
     addFileLink("📘 Tagalog Poem", files.TagalogPoem);
@@ -52,10 +47,6 @@ function showPage(list = filteredList) {
 
     sec2.appendChild(div);
   });
-
-  // Optional: disable prev/next if at bounds
-  document.getElementById("orev").disabled = currentPage === 1;
-  document.getElementById("next").disabled = currentPage >= Math.ceil(list.length / perPage);
 }
 
 // Pagination buttons
@@ -65,21 +56,20 @@ document.getElementById("orev").addEventListener("click", () => {
 });
 
 document.getElementById("next").addEventListener("click", () => {
-  const totalPages = Math.ceil(filteredList.length / perPage);
+  const totalPages = Math.ceil(Object.keys(studentslist).length / perPage);
   if (currentPage < totalPages) currentPage++;
   showPage();
 });
 
-// Search functionality
+showPage();
+
+// 🔍 SEARCH FIX
 document.getElementById("searchInput").addEventListener("input", (e) => {
   const q = e.target.value.toLowerCase().trim();
-  filteredList = Object.entries(studentslist).filter(([name]) =>
+  const filtered = Object.entries(studentslist).filter(([name]) =>
     name.toLowerCase().includes(q)
   );
 
-  currentPage = 1;
-  showPage();
+  currentPage = 1; // reset to first page
+  showPage(filtered.length ? filtered : Object.entries(studentslist));
 });
-
-// Initial render
-showPage();
