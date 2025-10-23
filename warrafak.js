@@ -1,12 +1,10 @@
 // ---------------------------
 // Avatar generator
 // ---------------------------
-
 function popfx() {
     const audio = new Audio("pop.mp3"); // Make sure pop.mp3 is in the same folder or correct path
     audio.play();
 }
-
 function avatarFor(name) {
   const encoded = encodeURIComponent(name);
   return `https://ui-avatars.com/api/?name=${encoded}&background=ffd6e8&color=4a0e23&rounded=true&size=256`;
@@ -52,10 +50,8 @@ studentGrid.addEventListener("click", (e) => {
   if (e.target.classList.contains("view-btn")) {
     const name = e.target.dataset.name;
     openModal(name);
-      popfx();
   }
-} 
-          
+});
 
 // ---------------------------
 // Modal
@@ -98,7 +94,7 @@ document.getElementById("searchInput").addEventListener("input", (e) => {
 const modeToggle = document.getElementById("modeToggle");
 modeToggle.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
-  modeToggle.textContent = document.body.classList.contains("dark-mode") ? "🌓" : "🌓";
+  modeToggle.textContent = document.body.classList.contains("dark-mode") ? "🌙" : "💗";
 });
 
 // ---------------------------
@@ -118,5 +114,3 @@ setInterval(createHeart, 600);
 // Initial render
 // ---------------------------
 renderStudents(Object.keys(studentslist));
-
-
