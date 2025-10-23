@@ -1,40 +1,49 @@
-
 let currentPage = 1;
 const perPage = 5;
 
-function showPage(){
-  sec2.innerHTML ="";
+const sec2 = document.getElementById("sec2");
+const audio = new Audio("pop.mp3");
 
-  const entri = Object.entries(doodl);
+function play() {
+  audio.play();
+}
+
+function showPage() {
+  sec2.innerHTML = "";
+
   const start = (currentPage - 1) * perPage;
   const end = start + perPage;
+  const items = doodl.slice(start, end);
 
-  let items = entri.slice(start, end);
-  
-  items.forEach(([name, file]) => {
-    const imgs = document.createElement("img");                
-    imgs.src = file;
-    imgs.style.width = "120px";  
-    imgs.style.height = "auto";
-    sec2.appendChild(imgs);
+  items.forEach((file) => {
+    const box = document.createElement("div");
+    box.className = "image-box";
 
-    
-    }); 
+    const img = document.createElement("img");
+    img.src = file;
 
-  document.getElementById("prev").addEventListener("click", () => {
-    if(currentPage != 1) currentPage--;
-    showPage();
+    box.appendChild(img);
+    box.addEventListener("click", play); // play audio when box clicked
+    sec2.appendChild(box);
   });
 }
-  document.getElementById("next").addEventListener("click", () => {
+
+// Pagination
+document.getElementById("prev").addEventListener("click", () => {
+  if (currentPage > 1) {
+    currentPage--;
+    showPage();
+  }
+});
+
+document.getElementById("next").addEventListener("click", () => {
+  const maxPage = Math.ceil(doodl.length / perPage);
+  if (currentPage < maxPage) {
     currentPage++;
     showPage();
-  });
+  }
+});
 
-  showPage();
+// Initial load
+showPage();
 
-  const audio= new Audio("pop.mp3");
-   function play(){
-   audio.play();
-
-   }
