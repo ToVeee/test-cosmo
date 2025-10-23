@@ -45,7 +45,8 @@ function showPage() {
     const img = document.createElement("img");
     img.src = src;
     img.style.border = "1px solid #ccc";
-    img.style.padding = "15px";
+    img.style.width = "200px";
+    img.style.width = "200px";
     img.style.marginBottom = "20px"; // fixed typo
     img.style.borderRadius = "6px";
     sec2.appendChild(img);
@@ -66,3 +67,4 @@ document.getElementById("next").addEventListener("click", () => {
 
 // Initial load
 showPage();
+
