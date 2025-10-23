@@ -5,7 +5,7 @@ const perPage = 5;
 function showPage(){
   sec2.innerHTML ="";
 
-  const entri = Object.entries(images);
+  const entri = Object.entries(doodl);
   const start = (currentPage - 1) * perPage;
   const end = start + perPage;
 
@@ -36,4 +36,5 @@ function showPage(){
   const audio= new Audio("pop.mp3");
    function play(){
    audio.play();
+
    }
