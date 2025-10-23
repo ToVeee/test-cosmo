@@ -279,12 +279,18 @@ a {
   left: 10px;
   top: 50%;
   transform: translateY(-50%);
+  height:40px; 
+  width:20px;
+  background-color:var(--brown);
 }
 #next {
   position: fixed;
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
+  height:40px; 
+  width:20px;
+  background-color:var(--brown);
 }
 
 /* Mobile Warning */
