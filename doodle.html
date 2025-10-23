@@ -3,72 +3,87 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cupid Cosmo</title>
+  <title>Student Portfolio Hub</title>
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- CSS -->
   <link rel="stylesheet" href="whatthefuckk.css" />
 </head>
 
 <body>
-  <div class="hearts-container" aria-hidden="true"></div>
-
-  <nav class="navbar" id="navbar">
-    <div class="logo">Cupid <span>Cosmo</span></div>
-    <ul class="nav-links">
-      <li><a href="whatthefuck.html" data-scroll>Home</a></li>
-      <li><a href="#about" data-scroll>About</a></li>
-      <li><a href="whatthefuck.html#students" data-scroll>Students</a></li>
-      <li><a href="#works" data-scroll>Works</a></li>
+  <!-- Navigation -->
+  <nav class="site-header" id="navbar">
+    <div class="logo">Student <span>Hub</span></div>
+    <ul class="top-nav">
+      <li><a class="nav-link" href="#hero" data-scroll>Home</a></li>
+      <li><a class="nav-link" href="#about" data-scroll>About</a></li>
+      <li><a class="nav-link" href="#students" data-scroll>Students</a></li>
+      <li><a class="nav-link" href="works.html">Works</a></li>
     </ul>
     <div class="nav-actions">
-      <input id="searchInput" placeholder="Search students..." autocomplete="off" />
-      <button id="modeToggle" title="Toggle theme">💗</button>
+      <input id="searchInput" type="search" placeholder="Search students..." autocomplete="off" aria-label="Search students" />
+      <button id="modeToggle" title="Toggle theme" aria-label="Toggle theme">🌓</button>
     </div>
   </nav>
 
   <main class="container">
-    
-      
+    <!-- Hero Section -->
     <section class="hero" id="hero">
       <div class="hero-content">
-        <h1>Download <span> doodles</span></h1>
-        <p class="lead">Where learning meets love and creativity 💘</p>
-        <div class="hero-ctas">
-          <a class="cta-btn" id="getStartedBtn" href="works.html" >Go back</a>
-        </div>
+        <h1>Welcome to the <span>Student Portfolio Hub</span></h1>
+        <p class="lead">Showcasing student projects, creativity, and achievements in a professional platform.</p>
       </div>
     </section>
 
-   
+    <!-- Infinite Scroll Gallery -->
+    <section class="scroll-gallery" id="gallery">
+      <div class="scroll-gallery-track">
+        <img src="images/sample1.jpg" alt="Sample Project 1">
+        <img src="images/sample2.jpg" alt="Sample Project 2">
+        <img src="images/sample3.jpg" alt="Sample Project 3">
+        <img src="images/sample4.jpg" alt="Sample Project 4">
+        <!-- Duplicate images for seamless scroll -->
+        <img src="images/sample1.jpg" alt="Sample Project 1">
+        <img src="images/sample2.jpg" alt="Sample Project 2">
+        <img src="images/sample3.jpg" alt="Sample Project 3">
+        <img src="images/sample4.jpg" alt="Sample Project 4">
+      </div>
+    </section>
 
-  
-       <div class="works-wrapper">
-      <button id="orev" class="nav-btn prev-btn">❮</button>
-      <section class="works" id="sec2">
-        <!-- student boxes get appended here -->
-      </section>
-      <button id="next" class="nav-btn next-btn">❯</button>
-    </div>
-    
-    
+    <!-- Students Section -->
+    <section class="students" id="students">
+      <h2>Student List</h2>
+      <div class="students-grid" id="studentGrid" aria-live="polite"></div>
+    </section>
+
+    <!-- About Section -->
     <section class="about" id="about">
-      <h2>About Cupid Cosmo</h2>
+      <h2>About This Platform</h2>
       <p class="about-text">
-        Cupid Cosmo is a dreamy, professional student portal for showcasing students and their works.
-        A pastel, romantic design with modern interactions — perfect for portfolios, editorial boards, and class showcases.
+        This hub is a professional platform for students to showcase their works and projects.
+        Organized, clean, and modern — perfect for portfolios and class showcases.
       </p>
       <div class="info-cards">
-        <div class="card">💞 Connect & Grow Together</div>
-        <div class="card">🎨 Creative Student Projects</div>
-        <div class="card">🚀 Innovation from the Heart</div>
+        <div class="card">Collaborate & Learn</div>
+        <div class="card">Showcase Creativity</div>
+        <div class="card">Highlight Achievements</div>
       </div>
     </section>
   </main>
 
- 
-  <script src="ddleRFC.js"></script>
-  <script src="doodle.js"></script>
-  
+  <!-- Modal for Student Details -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div id="modalContent" class="modal-content">
+      <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+      <img id="modalImg" alt="" class="modal-img" />
+      <h3 id="modalName"></h3>
+      <p id="modalRole"></p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="ddleRFC.js"</script>
+  <script src="rfc.js"></script>
+  <script src="warrafak.js"></script>
 </body>
-
 </html>
-
