@@ -1,6 +1,6 @@
 const poemsReference = {
-  "maningas_tagalog": "no item",
-  "maningas_english": `I wonder if it drives them crazy
+  maningas_tagalog: "no item",
+  maningas_english: `I wonder if it drives them crazy
 How do they manage to sleep at night?
 Knowing that many are suffering.
 All because of their <span class=”uf”    onclick=”play()
@@ -18,6 +18,6 @@ As if they want us to <span class=”uf”    onclick=”play()
   </span>
 
 `,
-  "maningas_sixword_t": `no item`,
-  "maningas_sixword_e": `nk item`
+  maningas_sixword_t: `no item`,
+  maningas_sixword_e": `nk item`
 };
