@@ -29,22 +29,45 @@ const doodl = [
   "CamScanner 10-20-25 14.35_1.jpg",
   "CamScanner 10-20-25 15.20_1.jpg"
 ];
-const galleryTrack = document.getElementById("gallery-track");
+const sec2 = document.getElementById("works");
+let currentPage = 1;
+const perPage = 5;
 
-  // Generate <img> elements automatically
-  function populateGallery(doodl) {
-    galleryTrack.innerHTML = ""; // clear any existing images
+function showPage() {
+  sec2.innerHTML = "";
 
-    // Duplicate images for seamless scroll
-    const fullArray = [...doodl, ...doodl];
+  const start = (currentPage - 1) * perPage;
+  const end = start + perPage;
+  const currentItems = list.slice(start, end);
 
-    fullArray.forEach((src, index) => {
-      const img = document.createElement("img");
-      img.src = src;
-      img.alt = `Project ${index + 1}`;
-      galleryTrack.appendChild(img);
-    });
-  }
+  doodl.forEach((src) => {
+    const img = document.createElement("img");
+    img.style.border = "1px solid #ccc";
+    img.style.padding = "15px";
+    img.style.marginBottom = "2w0px";
+    img.style.borderRadius = "6px";
+   
+      }
+    }
+    sec2.appendChild(img);
+  });
+}
 
-  populateGallery(images);
+// Pagination buttons
+document.getElementById("orev").addEventListener("click", () => {
+  if (currentPage > 1) currentPage--;
+  showPage();
+});
+
+document.getElementById("next").addEventListener("click", () => {
+  const totalPages = Math.ceil(Object.keys(studentslist).length / perPage);
+  if (currentPage < totalPages) currentPage++;
+  showPage();
+});
+
+showPage();
+
+ 
+});
+
 
