@@ -1,4 +1,35 @@
-  const galleryTrack = document.getElementById("gallery-track");
+const doodl = [
+  "CamScanner 10-20-25 14.24_2.jpg",
+  "CamScanner 10-20-25 14.27_1.jpg",
+  "CamScanner 10-20-25 14.28_1.jpg",
+  "CamScanner 10-20-25 15.27_1.jpg",
+  "CamScanner 10-20-25 15.28_1.jpg",
+  "CamScanner 10-20-25 15.28(1)_1.jpg",
+  "CamScanner 10-20-25 15.25(1)_1.jpg",
+  "CamScanner 10-20-25 15.25(2)_1.jpg",
+  "CamScanner 10-20-25 15.26_1.jpg",
+  "CamScanner 10-20-25 15.22_1.jpg",
+  "CamScanner 10-20-25 15.23_1.jpg",
+  "CamScanner 10-20-25 15.23(1)_1.jpg",
+  "CamScanner 10-20-25 15.24_1.jpg",
+  "CamScanner 10-20-25 15.24(1)_1.jpg",
+  "CamScanner 10-20-25 15.25_1.jpg",
+  "CamScanner 10-20-25 14.29_1.jpg",
+  "CamScanner 10-20-25 14.30_1.jpg",
+  "CamScanner 10-20-25 14.31_1.jpg",
+  "CamScanner 10-20-25 15.30_1.jpg",
+  "CamScanner 10-20-25 15.31_1.jpg",
+  "CamScanner 10-20-25 14.33_1.jpg",
+  "CamScanner 10-20-25 14.33(1)_1.jpg",
+  "CamScanner 10-20-25 14.34_1.jpg",
+  "CamScanner 10-20-25 15.21_1.jpg",
+  "CamScanner 10-20-25 15.21(1)_1.jpg",
+  "CamScanner 10-20-25 15.21(2)_1.jpg",
+  "CamScanner 10-20-2514.34(1)_1.jpg",
+  "CamScanner 10-20-25 14.35_1.jpg",
+  "CamScanner 10-20-25 15.20_1.jpg"
+];
+const galleryTrack = document.getElementById("gallery-track");
 
   // Generate <img> elements automatically
   function populateGallery(doodl) {
@@ -16,3 +47,4 @@
   }
 
   populateGallery(images);
+
