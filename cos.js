@@ -1,8 +1,9 @@
-const sec2 = document.getElementById("works");
 let currentPage = 1;
 const perPage = 5;
+let filteredList = Object.entries(studentslist); // global filtered list
 
-function showPage(list = Object.entries(studentslist)) {
+function showPage(list = filteredList) { // use global filtered list
+  const sec2 = document.getElementById("works");
   sec2.innerHTML = "";
 
   const start = (currentPage - 1) * perPage;
@@ -49,27 +50,28 @@ function showPage(list = Object.entries(studentslist)) {
   });
 }
 
-// Pagination buttons
+// Pagination
 document.getElementById("orev").addEventListener("click", () => {
   if (currentPage > 1) currentPage--;
   showPage();
 });
 
 document.getElementById("next").addEventListener("click", () => {
-  const totalPages = Math.ceil(Object.keys(studentslist).length / perPage);
+  const totalPages = Math.ceil(filteredList.length / perPage);
   if (currentPage < totalPages) currentPage++;
   showPage();
 });
 
+// Initial display
 showPage();
 
-// 🔍 SEARCH FIX
+// Search
 document.getElementById("searchInput").addEventListener("input", (e) => {
   const q = e.target.value.toLowerCase().trim();
-  const filtered = Object.entries(studentslist).filter(([name]) =>
+  filteredList = Object.entries(studentslist).filter(([name]) =>
     name.toLowerCase().includes(q)
   );
 
-  currentPage = 1; // reset to first page
-  showPage(filtered.length ? filtered : Object.entries(studentslist));
+  currentPage = 1;
+  showPage();
 });
