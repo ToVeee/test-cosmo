@@ -3,16 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Student Portfolio Hub</title>
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <!-- CSS -->
-   <link rel="stylesheet" href="doodle.css" />
-  
+  <title>Cupid Cosmo - Works</title>
+  <link rel="stylesheet" href="whatthefuckk.css" />
 </head>
-
 <body>
-  <!-- Navigation -->
  <div class="hearts-container" aria-hidden="true"></div>
 
   <nav class="navbar" id="navbar">
@@ -25,61 +19,30 @@
     </ul>
     <div class="nav-actions">
       <input id="searchInput" placeholder="Search students..." autocomplete="off" />
-      <button id="modeToggle" title="Toggle theme">🌗</button>
+      <button id="modeToggle" title="Toggle theme">💗</button>
     </div>
   </nav>
-  </nav>
-
-  <main class="container">
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
+  <section class="hero" id="hero">
       <div class="hero-content">
-        <h1>Welcome to the <span>Student Portfolio Hub</span></h1>
-        <p class="lead">Showcasing student projects, creativity, and achievements in a professional platform.</p>
+        <h1>welcome to<span> doodles</span></h1>
+        <p class="lead">Where learning meets love and creativity 💘</p>
+        <div class="hero-ctas">
+          <a class="cta-btn" id="getStartedBtn" href="whatthefuck.html" >Go back</a>
+        </div>
       </div>
     </section>
 
-    <!-- Infinite Scroll Gallery -->
-    <section class="scroll-gallery" id="gallery">
-      <div class="scroll-gallery-track" id="gallery-track">
-    
-      </div>
-    </section>
-
-    <!-- Students Section -->
-    <section class="students" id="students">
-      <h2>Student List</h2>
-      <div class="students-grid" id="studentGrid" aria-live="polite"></div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-      <h2>About This Platform</h2>
-      <p class="about-text">
-        This hub is a professional platform for students to showcase their works and projects.
-        Organized, clean, and modern — perfect for portfolios and class showcases.
-      </p>
-      <div class="info-cards">
-        <div class="card">Collaborate & Learn</div>
-        <div class="card">Showcase Creativity</div>
-        <div class="card">Highlight Achievements</div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Modal for Student Details -->
-  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
-    <div id="modalContent" class="modal-content">
-      <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
-      <img id="modalImg" alt="" class="modal-img" />
-      <h3 id="modalName"></h3>
-      <p id="modalRole"></p>
+   <div class="works-wrapper">
+      <button id="orev" class="prev-btn">❮</button>
+      <section class="works" id="works">
+        <!-- student boxes get appended here -->
+      </section>
+      <button id="next" class=" next-btn">❯</button>
     </div>
-  </div>
+  <script src="rfc.js"></script>
+  <script src="cos.js"></script>
 
-  <!-- Scripts -->
-  <script src="ddleRFC.js"</script>
-
-  <script src="doodle.js"></script>
 </body>
 </html>
+
+
