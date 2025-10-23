@@ -22,30 +22,7 @@ const studentslist = {
   EnglishPoem: "Bunyi, poem english.docx",
   SixWordE: "Bunyi, ff e.docx",
   SixWordT: "Bunyi, ff tagalog.docx",
-  poem: `<p> "Corruption, tell me why the Philippines has corruption.
-Because of the politicians who stole our donations,
-that’s why, on September 4, 2025,
-there was chaos and destruction everywhere.
- 
-Why are politicians like this?
-Do they not know climate change exists?
-Do they not see that year after year,
-the sea level rises?
- 
-Why are they so obsessed with the money we donated,
-only to spend it on <span class="uf"    onclick="play()
-   alert('love, commitment, and personal identity')">
-   Jewelry
-  </span> and belongings?
- 
-That’s why we held rallies, even if we were treated abusively.
-We’re fighting for what’s right.
-Then why don’t you care?
-You send us away,
-while so many people have died —
-and you politicians just don’t care
-about the flood that goes everywhere.
-</p>`
+  poem: `adi`
 },
 
 "Chavez, Dancris Madriaga": {
@@ -345,6 +322,7 @@ about the flood that goes everywhere.
 }
 
 };
+
 
 
 
