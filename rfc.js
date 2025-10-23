@@ -144,25 +144,21 @@ const studentslist = {
     SixWordT: "Buela ff t.docx"
   },
 
-"Calong, Martha Joanna Morilla": {
+  "Calong, Martha Joanna Morilla": {
     PFP: "Calong, Martha Joanna M_.png",
     TagalogPoem: "Calong, poem tagalog.docx",
     EnglishPoem: "Calong, poem english.docx",
     SixWordE: "Calong ff e.docx",
-    SixWordT: "Calong ff t.docx"
-    poem:'<p>The written letter that should’ve been a promise,
-Written in sweet words that feel <span class=”uf” onclick=”play()
-   Alert(‘causing or liable to cause a feeling of nausea or disgust.’)
-   Sickening
-  </span> 
- to read.
-Hidden innocence-like a predator ready to strike it’s prey,
-Ready to devour everything in it’s own way.
- 
+    SixWordT: "Calong ff t.docx",
+    Poem: `<p>The written letter that should’ve been a promise,
+Written in sweet words that feel <span class="uf" onclick="play(); alert('causing or liable to cause a feeling of nausea or disgust.');">Sickening</span> to read.
+Hidden innocence-like a predator ready to strike its prey,
+Ready to devour everything in its own way.
+
 Spreading like a virus down a dollar street,
 Filling everyone with hollow words and chronic ills.
 And when they’re gone, they leave not only broken hearts,
-But also a word made hallow and obedient.</p>'
+But also a word made hollow and obedient.</p>`
   },
 
   "Calucin, Jellah Mae Manaog": {
@@ -334,4 +330,3 @@ But also a word made hallow and obedient.</p>'
   }
 
 };
-
