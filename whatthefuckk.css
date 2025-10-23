@@ -317,3 +317,7 @@ a {
     border-radius: 10px;
   }
 }
+
+.doodles:hover {
+  transform:scale(2.2):
+}
