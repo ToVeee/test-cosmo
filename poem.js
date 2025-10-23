@@ -20,7 +20,7 @@
     // Loop through all students
     Object.entries(studentslist).forEach(([name, student]) => {
       // Check for multiple possible poem attributes
-      const poemKeys = ['poem', 'EnglishPoem', 'TagalogPoem', 'SixWordE', 'SixWordT'];
+      const poemKeys = ['poem'];
       poemKeys.forEach(key => {
         if (student[key]) {
           createPoemBox(name, student[key]);
