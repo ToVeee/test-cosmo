@@ -52,11 +52,10 @@ studentGrid.addEventListener("click", (e) => {
   if (e.target.classList.contains("view-btn")) {
     const name = e.target.dataset.name;
     openModal(name);
+      popfx();
   }
 } 
-        studentGrid.addEventListener("click", (e) => {
-  if (e.target.classList.contains("view-btn")) {
-    popfx(););
+          
 
 // ---------------------------
 // Modal
@@ -119,4 +118,5 @@ setInterval(createHeart, 600);
 // Initial render
 // ---------------------------
 renderStudents(Object.keys(studentslist));
+
 
