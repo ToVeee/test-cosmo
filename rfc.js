@@ -275,7 +275,7 @@ about the flood that goes everywhere.
 "Maningas, Dannah Mae Cubalan": {
   PFP: "Maningas, Dannah Mae C_.png",
   TagalogPoem: "Maningas, poem tagalog.docx",
-  EnglishPoem: "Maningas, poem english.docx",
+  EnglishPoem: "maningas_english",
   SixWordE: "Maningas, ff e.docx",
   SixWordT: "Maningas, ff t.docx"
 },
