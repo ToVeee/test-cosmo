@@ -26,6 +26,21 @@
       line-height: 1.5;
       color: var(--text2);
     }
+
+    /* Optional: make videos responsive */
+    .videos-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .videos-wrapper iframe {
+      border-radius: 12px;
+      width: 400px;
+      height: 225px;
+      max-width: 100%;
+    }
   </style>
 </head>
 <body>
@@ -42,6 +57,7 @@
     <h1>Student Poems</h1>
     <div id="poemsContainer"></div>
 
+    <!-- Drive buttons -->
     <div style="
       display: flex;
       flex-direction: row-reverse;
@@ -52,7 +68,7 @@
       border-radius: 12px;
       background-color: #f0f0f0;
     ">
-      <a href="https://drive.google.com/drive/folders/1cjlTbSgfctDn75dx-zq5IU8iLiuNb0JX" 
+      <a href="https://drive.google.com/drive/folders/1VcKQarBsqBkf1a3SVc_I4wfCgm3xF4SK"
          target="_blank" rel="noopener noreferrer" style="text-decoration:none;">
         <div style="
           width: 100px; height: 100px;
@@ -60,12 +76,15 @@
           border-radius: 8px;
           cursor: pointer;
           transition: transform 0.2s;
-        " onmouseover="this.style.transform='scale(1.05)'" 
+          display:flex; align-items:center; justify-content:center; color:black;
+          font-weight:bold;
+        " onmouseover="this.style.transform='scale(1.05)'"
           onmouseout="this.style.transform='scale(1)'">
+          BOYS
         </div>
       </a>
 
-      <a href="https://drive.google.com/drive/folders/1cjlTbSgfctDn75dx-zq5IU8iLiuNb0JX" 
+      <a href="https://drive.google.com/drive/folders/1QWAa_xIsssjDbmAO-LRzXuAXpBIWKmJM"
          target="_blank" rel="noopener noreferrer" style="text-decoration:none;">
         <div style="
           width: 100px; height: 100px;
@@ -73,10 +92,25 @@
           border-radius: 8px;
           cursor: pointer;
           transition: transform 0.2s;
-        " onmouseover="this.style.transform='scale(1.05)'" 
+          display:flex; align-items:center; justify-content:center; color:black;
+          font-weight:bold;
+        " onmouseover="this.style.transform='scale(1.05)'"
           onmouseout="this.style.transform='scale(1)'">
+          GIRLS
         </div>
       </a>
+    </div>
+
+    <!-- Videos -->
+    <div class="videos-wrapper">
+      <iframe 
+        src="https://drive.google.com/file/d/BOYS_FILE_ID/preview"
+        allow="autoplay">
+      </iframe>
+      <iframe 
+        src="https://drive.google.com/file/d/GIRLS_FILE_ID/preview"
+        allow="autoplay">
+      </iframe>
     </div>
   </main>
 
