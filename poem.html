@@ -27,7 +27,7 @@
       color: var(--text2);
     }
 
-    /* Optional: make videos responsive */
+    /* Videos layout */
     .videos-wrapper {
       display: flex;
       flex-wrap: wrap;
@@ -35,11 +35,31 @@
       gap: 25px;
       margin-top: 30px;
     }
-    .videos-wrapper iframe {
-      border-radius: 12px;
+    .video-container {
+      position: relative;
       width: 400px;
-      height: 225px;
       max-width: 100%;
+      height: 225px;
+    }
+    .video-container iframe {
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+    }
+    .video-loading {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      border-radius: 12px;
+      color: #333;
+      z-index: 10;
+      pointer-events: none;
     }
   </style>
 </head>
@@ -103,15 +123,23 @@
 
     <!-- Videos -->
     <div class="videos-wrapper">
-      <iframe 
-        src="https://drive.google.com/file/d/1I19uUC4efR2UrmVncD31T9gX2vzr9Q3Q/preview"
-        >
-      </iframe>
-      <iframe 
-        src="https://drive.google.com/file/d/1eJTzizVqjVlpA1qs380-eSdHSaI2Javx/preview"
-         >
-      </iframe>
+      <div class="video-container">
+        <div class="video-loading">Loading... please wait</div>
+        <iframe 
+          src="https://drive.google.com/file/d/1I19uUC4efR2UrmVncD31T9gX2vzr9Q3Q/preview"
+          onload="this.previousElementSibling.style.display='none';">
+        </iframe>
+      </div>
+
+      <div class="video-container">
+        <div class="video-loading">Loading... please wait</div>
+        <iframe 
+          src="https://drive.google.com/file/d/1eJTzizVqjVlpA1qs380-eSdHSaI2Javx/preview"
+          onload="this.previousElementSibling.style.display='none';">
+        </iframe>
+      </div>
     </div>
+
   </main>
 
   <script src="poemsRFC.js"></script>
