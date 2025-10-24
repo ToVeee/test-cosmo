@@ -1,13 +1,13 @@
-// ---------------------------
+function playClickSound() {
+  const audio = new Audio("pop.mp3"); // make sure this file exists
+  audio.play();
+}// ---------------------------
 // Avatar generator
 // ---------------------------
 // ---------------------------
 // Click sound effect
 // ---------------------------
-function playClickSound() {
-  const audio = new Audio("pop.mp3"); // make sure this file exists
-  audio.play();
-}
+
 
 
 function avatarFor(name) {
@@ -122,5 +122,6 @@ setInterval(createHeart, 600);
 // Initial render
 // ---------------------------
 renderStudents(Object.keys(studentslist));
+
 
 
