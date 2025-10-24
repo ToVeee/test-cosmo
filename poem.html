@@ -1,95 +1,88 @@
-<!-- Link boxes -->
-<div style="
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  padding: 20px;
-  border-radius: 12px;
-  background-color: #f0f0f0;
-  flex-wrap: wrap;
-">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Poems</title>
+  <link rel="stylesheet" href="whatthefuckk.css">
+  <style>
+    .poem-box {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      background-color: #fdfdfd;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .poem-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    }
+    .poem-box h3 {
+      margin-bottom: 10px;
+      color: var(--accent);
+    }
+    .poem-box div {
+      line-height: 1.5;
+      color: var(--text2);
+    }
+  </style>
+</head>
+<body>
 
-  <a href="https://drive.google.com/drive/folders/your-boys-folder-id" target="_blank" style="text-decoration:none;">
+  <nav class="navbar">
+    <div class="logo">Cupid <span>Cosmo</span></div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="works.html">Works</a></li>
+    </ul>
+  </nav>
+
+  <main class="container" style="max-width:800px; margin:auto; text-align:center;">
+    <h1>Student Poems</h1>
+    <div id="poemsContainer"></div>
+
     <div style="
-      width: 120px; height: 120px;
-      background: #ccc;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: transform 0.2s;
       display: flex;
+      flex-direction: row-reverse;
       justify-content: center;
       align-items: center;
-      font-weight: bold;
-      color: #333;
-    " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-      BOYS
-    </div>
-  </a>
-
-  <a href="https://drive.google.com/drive/folders/your-girls-folder-id" target="_blank" style="text-decoration:none;">
-    <div style="
-      width: 120px; height: 120px;
-      background: #aaa;
+      gap: 10px;
+      padding: 20px;
       border-radius: 12px;
-      cursor: pointer;
-      transition: transform 0.2s;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: bold;
-      color: #333;
-    " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-      GIRLS
-    </div>
-  </a>
-</div>
-
-<!-- Video section -->
-<div style="
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
-  flex-wrap: wrap;
-  margin-top: 40px;
-  margin-bottom: 60px;
-">
-
-  <div style="
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 400px;
-    max-width: 90%;
-  ">
-    <h3 style="margin-bottom: 10px; color: #444;">Boys Video</h3>
-    <video controls style="
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      background-color: #f0f0f0;
     ">
-      <source src="boys-video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
+      <a href="https://drive.google.com/drive/folders/1cjlTbSgfctDn75dx-zq5IU8iLiuNb0JX" 
+         target="_blank" rel="noopener noreferrer" style="text-decoration:none;">
+        <div style="
+          width: 100px; height: 100px;
+          background: #ccc;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: transform 0.2s;
+        " onmouseover="this.style.transform='scale(1.05)'" 
+          onmouseout="this.style.transform='scale(1)'">
+        </div>
+      </a>
 
-  <div style="
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 400px;
-    max-width: 90%;
-  ">
-    <h3 style="margin-bottom: 10px; color: #444;">Girls Video</h3>
-    <video controls style="
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-    ">
-      <source src="girls-video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-</div>
+      <a href="https://drive.google.com/drive/folders/1cjlTbSgfctDn75dx-zq5IU8iLiuNb0JX" 
+         target="_blank" rel="noopener noreferrer" style="text-decoration:none;">
+        <div style="
+          width: 100px; height: 100px;
+          background: #aaa;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: transform 0.2s;
+        " onmouseover="this.style.transform='scale(1.05)'" 
+          onmouseout="this.style.transform='scale(1)'">
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <script src="poemsRFC.js"></script>
+  <script src="rfc.js"></script>
+  <script src="poem.js"></script>
+
+</body>
+</html>
