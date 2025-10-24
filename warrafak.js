@@ -1,6 +1,14 @@
 // ---------------------------
 // Avatar generator
 // ---------------------------
+// ---------------------------
+// Click sound effect
+// ---------------------------
+function playClickSound() {
+  const audio = new Audio("pop.mp3"); // make sure this file exists
+  audio.play();
+}
+
 
 function avatarFor(name) {
   const encoded = encodeURIComponent(name);
@@ -44,9 +52,12 @@ function renderStudents(list) {
 // Event Delegation for View button
 // ---------------------------
 studentGrid.addEventListener("click", (e) => {
-  if (e.target.classList.contains("view-btn")) {
-    const name = e.target.dataset.name;
-    openModal(name);
+if (e.target.classList.contains("view-btn")) {
+  const name = e.target.dataset.name;
+  playClickSound(); // 🔊 plays the pop sound
+  openModal(name);  // 🪟 opens the modal
+}
+
   }
 });
 
@@ -111,4 +122,5 @@ setInterval(createHeart, 600);
 // Initial render
 // ---------------------------
 renderStudents(Object.keys(studentslist));
+
 
