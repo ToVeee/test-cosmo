@@ -51,15 +51,6 @@ function renderStudents(list) {
 // ---------------------------
 // Event Delegation for View button
 // ---------------------------
-studentGrid.addEventListener("click", (e) => {
-if (e.target.classList.contains("view-btn")) {
-  const name = e.target.dataset.name;
-  playClickSound(); // 🔊 plays the pop sound
-  openModal(name);  // 🪟 opens the modal
-}
-
-  }
-});
 
 // ---------------------------
 // Modal
@@ -77,6 +68,16 @@ function openModal(name) {
   modalRole.textContent = "Role: Student";
   modal.classList.add("show");
 }
+studentGrid.addEventListener("click", (e) => {
+if (e.target.classList.contains("view-btn")) {
+  const name = e.target.dataset.name;
+  playClickSound(); // 🔊 plays the pop sound
+  openModal(name);  // 🪟 opens the modal
+}
+
+  }
+});
+
 
 function closeModal() {
   modal.classList.remove("show");
@@ -122,6 +123,7 @@ setInterval(createHeart, 600);
 // Initial render
 // ---------------------------
 renderStudents(Object.keys(studentslist));
+
 
 
 
