@@ -283,6 +283,7 @@ a {
   width:40px;
   background-color:var(--brown);
   border-radius:15px;
+  color:white;
 }
 #next {
   position: fixed;
@@ -293,6 +294,7 @@ a {
   width:40px;
   background-color:var(--brown);
   border-radius:15px;
+  color:white;
 }
 
 /* Mobile Warning */
