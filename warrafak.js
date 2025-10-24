@@ -1,15 +1,14 @@
-function playClickSound() {
-  const audio = new Audio("pop.mp3"); // make sure this file exists
-  audio.play();
-}// ---------------------------
-// Avatar generator
-// ---------------------------
 // ---------------------------
 // Click sound effect
 // ---------------------------
+function playClickSound() {
+  const audio = new Audio("pop.mp3"); // make sure this file exists
+  audio.play();
+}
 
-
-
+// ---------------------------
+// Avatar generator
+// ---------------------------
 function avatarFor(name) {
   const encoded = encodeURIComponent(name);
   return `https://ui-avatars.com/api/?name=${encoded}&background=ffd6e8&color=4a0e23&rounded=true&size=256`;
@@ -49,10 +48,6 @@ function renderStudents(list) {
 }
 
 // ---------------------------
-// Event Delegation for View button
-// ---------------------------
-
-// ---------------------------
 // Modal
 // ---------------------------
 const modal = document.getElementById("modal");
@@ -68,24 +63,25 @@ function openModal(name) {
   modalRole.textContent = "Role: Student";
   modal.classList.add("show");
 }
-studentGrid.addEventListener("click", (e) => {
-if (e.target.classList.contains("view-btn")) {
-  const name = e.target.dataset.name;
-  playClickSound(); // 🔊 plays the pop sound
-  openModal(name);  // 🪟 opens the modal
-}
-
-  }
-});
-
 
 function closeModal() {
   modal.classList.remove("show");
 }
 
 modalClose.addEventListener("click", closeModal);
-modal.addEventListener("click", e => {
+modal.addEventListener("click", (e) => {
   if (e.target === modal) closeModal();
+});
+
+// ---------------------------
+// Event Delegation for View button
+// ---------------------------
+studentGrid.addEventListener("click", (e) => {
+  if (e.target.classList.contains("view-btn")) {
+    const name = e.target.dataset.name;
+    playClickSound(); // 🔊 plays the pop sound
+    openModal(name);  // 🪟 opens the modal
+  }
 });
 
 // ---------------------------
@@ -93,7 +89,7 @@ modal.addEventListener("click", e => {
 // ---------------------------
 document.getElementById("searchInput").addEventListener("input", (e) => {
   const q = e.target.value.toLowerCase().trim();
-  const filtered = Object.keys(studentslist).filter(s => s.toLowerCase().includes(q));
+  const filtered = Object.keys(studentslist).filter((s) => s.toLowerCase().includes(q));
   renderStudents(filtered);
 });
 
@@ -123,7 +119,3 @@ setInterval(createHeart, 600);
 // Initial render
 // ---------------------------
 renderStudents(Object.keys(studentslist));
-
-
-
-
