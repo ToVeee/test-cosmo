@@ -38,7 +38,46 @@
       <li><a href="works.html">Works</a></li>
     </ul>
   </nav>
+div style="
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #f0f0f0; /* change color if you want */
+">
+  <a href="https://site1.com" target="_blank" style="text-decoration:none;">
+    <div style="
+      width: 100px; height: 100px;
+      background: #ccc;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
+  </a>
 
+  <a href="https://drive.google.com/drive/folders/1cjlTbSgfctDn75dx-zq5IU8iLiuNb0JX" target="_blank" style="text-decoration:none;">
+    <div style="
+      width: 100px; height: 100px;
+      background: #aaa;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
+  </a>
+
+  <a href="https://drive.google.com/drive/folders/1cjlTbSgfctDn75dx-zq5IU8iLiuNb0JX" target="_blank" style="text-decoration:none;">
+    <div style="
+      width: 100px; height: 100px;
+      background: #888;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
+  </a>
+</div>
   <main class="container">
     <h1>Student Poems</h1>
     <div id="poemsContainer"></div>
