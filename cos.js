@@ -42,8 +42,8 @@ function showPage(list = Object.entries(studentslist)) {
 
     addFileLink("📘 Tagalog Poem", files.TagalogPoem);
     addFileLink("📗 English Poem", files.EnglishPoem);
-    addFileLink("📙 Six-Word Story (English)", files.SixWordE);
-    addFileLink("📕 Six-Word Story (Tagalog)", files.SixWordT);
+    addFileLink("📙 Six-Woord Filash-fiction (English)", files.SixWordE);
+    addFileLink("📕 Six-Word Flash-Fiction (Tagalog)", files.SixWordT);
 
     sec2.appendChild(div);
   });
@@ -73,3 +73,4 @@ document.getElementById("searchInput").addEventListener("input", (e) => {
   currentPage = 1; // reset to first page
   showPage(filtered.length ? filtered : Object.entries(studentslist));
 });
+
