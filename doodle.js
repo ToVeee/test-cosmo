@@ -1,4 +1,5 @@
 const doodl = [
+   "danna.jfif",
   "CamScanner 10-20-25 14.24_2.jpg",
   "CamScanner 10-20-25 14.27_1.jpg",
   "CamScanner 10-20-25 14.28_1.jpg",
@@ -69,6 +70,7 @@ document.getElementById("next").addEventListener("click", () => {
 
 // Initial load
 showPage();
+
 
 
 
