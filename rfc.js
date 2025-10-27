@@ -13,7 +13,7 @@ const studentslist = {
     TagalogPoem: "Almariego, poem tagalog.docx",
     EnglishPoem: "Almariego, poem english.docx",
     SixWordE: "Almariego ff e.docx",
-    SixWordT: "Almariego tagalog.docx"
+    SixWordT: "Almariego, ff tagalog.docx"
   },
 
   "Bunyi, Dhave Zairhon Rosales": {
@@ -35,9 +35,12 @@ const studentslist = {
   "Eguia, Ej Jhanver Almirez": {
     PFP: "Eguia, EJ Jhanver A.png",
     TagalogPoem: "Eguia, poem tagalog.docx",
-    EnglishPoem: "Eguia, poem english.docx",
+    // Updated to the actual filename found in your list:
+    EnglishPoem: "Eguia.docx",
+    // SixWordE: (left as original if not found in file list)
     SixWordE: "Eguia ff e.docx",
-    SixWordT: "Eguia tagalog.docx"
+    // Found "Eguia, ff t.docx" in your list — set as SixWordT
+    SixWordT: "Eguia, ff t.docx"
   },
 
   "Jarabejo, Janoah Sereño": {
@@ -77,7 +80,7 @@ const studentslist = {
     TagalogPoem: "Nabor, poem tagalog.docx",
     EnglishPoem: "Nabor, poem english.docx",
     SixWordE: "Nabor ff e.docx",
-    SixWordT: "Nabor tagalog.docx"
+    SixWordT: "Nabor ff t.docx"
   },
 
   "Pasatiempo, Ram Manalastas": {
@@ -109,7 +112,7 @@ const studentslist = {
     TagalogPoem: "Torres, poem tagalog.docx",
     EnglishPoem: "Torres, poem english.docx",
     SixWordE: "Torres ff e.docx",
-    SixWordT: "Torres tagalog.docx"
+    SixWordT: "Torres ff t.docx"
   },
 
   "Umali, Leonel Inaanuran": {
